@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const request = require('request-promise');
-mongoose.connect('mongodb://localhost/udemy');
+mongoose.connect('mongodb://database/udemy');
 
 const udemySchema = mongoose.Schema({
   //create schema
