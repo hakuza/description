@@ -1,6 +1,9 @@
 body {
-  color: #fff;
   min-width: 768px;
+}
+
+.streamer_text {
+  color: #fff;
 }
 
 .star {
@@ -33,6 +36,6 @@ body {
   justify-content: flex-start;
 }
 
-span {
+row_span {
   padding-right: 5px;
 }
