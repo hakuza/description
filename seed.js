@@ -24,8 +24,9 @@ const Udemy = mongoose.model('Udemy', udemySchema);
 let options = {
   url: `https://www.udemy.com/api-2.0/courses/?page_size=200&search=programming&ordering=highest-rated&fields[course]=title,headline,num_lectures,num_subscribers,created,visible_instructors,avg_rating,price,num_reviews,description`,
   headers: {
-    Authorization:
-      'Basic YnFuRUljaHNndUFjdk9MbHlEYUFOa2RJV1d1aXpyOWFldDRzUE5NYzpBVFRkTzB6dW5HeFB4cUxtMWlyUWw4Q0VTTlRIaGZ2Vlh3Y3RUckR6cHNRM25zTUF0bnliTUQ2U3hYNHVSMUNQZ0tIcjUyWFdFeTZZendtVUZuRHFVZ3UwTVFPcFpvbjlLODZOTHcwNURha1U1bElrVTZpQ24yZmhKMkhEMlI3Nw==',
+    Authorization: 'Basic YnFuRUljaHNndUFjdk9MbHlEYUFOa2RJV1d1aXpyOWFldDRzUE5NYzpBVFRkTzB6dW5HeFB4cU' +
+        'xtMWlyUWw4Q0VTTlRIaGZ2Vlh3Y3RUckR6cHNRM25zTUF0bnliTUQ2U3hYNHVSMUNQZ0tIcjUyWFdFeT' +
+        'ZZendtVUZuRHFVZ3UwTVFPcFpvbjlLODZOTHcwNURha1U1bElrVTZpQ24yZmhKMkhEMlI3Nw==',
     Accept: 'application/json, text/plain, */*'
   }
 };
@@ -63,9 +64,10 @@ async function getCourses() {
   }
 }
 
-getCourses().then(() =>
-  Udemy.find((err, results) => {
-    if (err) console.log(err);
-    else console.log(results);
-  })
-);
+getCourses().then(() => Udemy.find((err, results) => {
+  if (err) 
+    console.log(err);
+  else 
+    console.log(results);
+  }
+));
